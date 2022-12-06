@@ -1,0 +1,25 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* slider images css  */
+.images-wrape{
+    height: auto;
+    max-width: 100%;
+}
+.side-images img{
+    height: 100px;
+    width: 100px;
+}
+.img-demo{
+max-width: 60%;
+height: auto;
+}
+.work-information-section ::after{
+    content: " ";
+    background-image: url('/images/img10.jpg');
+    position: sticky;
+    z-index:1;
+
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika_Art.com</title>
+  <!-- bootstrape css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- css links -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- font cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .vedioCreated {
+
+      height: 300px;
+      border: 5px solid #ffeac4;
+      border-radius: 100px 0px 100px 0px;
+      margin: 15px 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navigation-hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="navigation-wrape">
+            <nav class="navbar navbar-expand-lg bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand text-primary ps-5 pe-5" href="#">Sanika Art</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider section with 20 photos -->
+  <div class="work-information-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-6 col-xxl-6 col-sm-12 col-md-12">
+          <div class="images-wrape">
+            <div class="demo-image d-flex justify-content-center align-items-center">
+              <img src="images/img1.jpg" alt="" id="mainimages" class="img-demo pb-5" />
+            </div>
+            <div class="side-images d-flex justify-content-around align-items-center flex-wrap">
+              <img src="images/img1.jpg" alt="" onclick="changeimage13()" />
+              <img src="images/img2.jpg" alt="" id="image-1" onclick="changeimage()" />
+              <img src="images/img20.jpg" alt="" onclick="changeimage1()" />
+              <img src="images/img3.jpg" alt="" onclick="changeimage2()" />
+              <img src="images/img4.jpg" alt="" onclick="changeimage3()" />
+              <img src="images/img7.jpg" alt="" onclick="changeimage4()" />
+              <img src="images/img6.jpg" alt="" onclick="changeimage5()" />
+              <img src="images/img8.jpg" alt="" onclick="changeimage6()" />
+              <img src="images/img9.jpg" alt="" onclick="changeimage7()" />
+              <img src="images/img10.jpg" alt="" onclick="changeimage8()" />
+              <img src="images/img12.jpg" alt="" onclick="changeimage9()" />
+              <img src="images/img20.jpg" alt="" onclick="changeimage10()" />
+              <img src="images/img13.jpg" alt="" onclick="changeimage11()" />
+              <img src="images/img18.jpg" alt="" onclick="changeimage12()" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6 col-xxl-6 col-sm-12 col-md-12">
+          <div class="price-section">
+            <h1 class="">Handmade Pencil Sketch</h1>
+            <h2 class="text-primary fw-light">₹ 800.0 – ₹2000.0</h2>
+            <p class="fw-bolder">Want a gift for your special ones?</p>
+            <p class="">
+              Gift them a handmade sketch, it tells how much time you have
+              invested to present a gift for them. It brings them close to
+              your heart and they will remember you everytime they see your
+              present.
+            </p>
+            <p class="fw-bolder">
+              Best gift for Birthdays, Anniversary, Mother’s day, Friendship
+              day, and on any special occasion.
+            </p>
+            <h3></h3>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <select name="" id="FrameOPt"  class="form-control " onchange="FrameSelectFun()">
+                <option class="p1 "> --Select Frame--</option>
+                <option class="p1 " value="WithFrame1"> With Frame</option>
+                <option class="p1 " value="WithoutFrame1"> Without Frame</option>
+              </select>
+              <script>
+                function FrameSelectFun() {
+                  var form = document.getElementById('FrameOPt').value;
+                  switch (form) {
+                    case "WithFrame1": {
+                      document.getElementById('WithFrame').style.display = 'block'
+
+                      document.getElementById('WithoutFrame').style.display = 'none'
+                      break;
+                    }
+                    case "WithoutFrame1": {
+                      document.getElementById('WithoutFrame').style.display = 'block'
+                      document.getElementById('WithFrame').style.display = 'none'
+                      break;
+                    }
+                  }
+                }
+
+              </script>
+            </div>
+            <div class="col-6">
+              <select name="" id="WithFrame"  style="display: none; " onchange="PriceWithFrame()" class="form-control">
+                <option class="p1 "> --Select Types--</option>
+                <option value="a4with" class="p1 "> A4 </option>
+                <option value="a3with" class="p1 ">A3</option>
+                <option value="custwith" class="p1 ">Customized Sketch</option>
+              </select>
+              <select name="" id="WithoutFrame"  onchange="PriceWithoutFrame()"  style="display: none;" class="form-control">
+                <option class="p1 "> --Select Types--</option>
+                <option value="a4without" class="p1 "> A4 </option>
+                <option value="a3without" class="p1 ">A3</option>
+                <option value="custwithout" class="p1 ">Customized Sketch</option>
+              </select>
+              <script>
+              function  PriceWithFrame(){
+                  const withF=document.getElementById('WithFrame').value;
+                 
+                  switch (withF){
+                    case'a4with':{
+              document.getElementById('PriceBox').innerHTML = "<h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Single Image:</h5><h1> <i class='fa-sharp fa-solid fa-indian-rupee-sign'></i> 1100 </h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Couple Image:</h5><h1> <i class='fa-sharp fa-solid fa-indian-rupee-sign'></i>1700 </h1>";
+              break
+
+                    }
+                    case'a3with':{
+                      document.getElementById('PriceBox').innerHTML = "<h5 > Single Image:</h5><h1> <i class='fa-sharp fa-solid fa-indian-rupee-sign'></i>1600 </h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Couple Image:</h5><h1> <i class='fa-sharp fa-solid fa-indian-rupee-sign'></i>2500 </h1>"
+                      break
+                    }
+                    case'custwith':{
+                      document.getElementById('PriceBox').innerHTML = "<h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Three Face  Image:</h5><h1><i class='fa-sharp fa-solid fa-indian-rupee-sign'></i> 1700 </h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Plus three faces Image:</h5><h1> Extra Charges (Dm For Inquirey) </h1>"
+                      break
+                    }
+                  }
+
+
+                }
+                function PriceWithoutFrame(){
+                  const withoutF=document.getElementById('WithoutFrame').value;
+                  switch (withoutF){
+                    case'a4without':{
+              document.getElementById('PriceBox').innerHTML = "<h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Single Image:</h5><h1><i class='fa-sharp fa-solid fa-indian-rupee-sign'></i>800</h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Couple Image:</h5><h1><i class='fa-sharp fa-solid fa-indian-rupee-sign'></i> 1400  </h1>";
+              break
+
+                    }
+                    case'a3without':{
+                      document.getElementById('PriceBox').innerHTML = "<h5 > Single Image:</h5><h1> <i class='fa-sharp fa-solid fa-indian-rupee-sign'></i>1300 </h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Couple Image:</h5><h1><i class='fa-sharp fa-solid fa-indian-rupee-sign'></i> 2200 </h1>"
+                      break
+                    }
+                    case'custwithout':{
+                      document.getElementById('PriceBox').innerHTML = "<h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Three Face  Image:</h5><h1><i class='fa-sharp fa-solid fa-indian-rupee-sign'></i> 1400 </h1>  <h5 class='text-warning fs-1 shadow-lg rounded text-center p-2'> Plus three faces Image:</h5><h1> Extra Charges (Dm For Inquirey) </h1>"
+                      break
+                    }
+                  }
+
+                }
+              </script>
+            </div> 
+          </div>
+          <div class="row m-5">
+            <div class="col-12">
+              <h4>Your Price Details</h4>
+             <div class="p-5" id="PriceBox" class="form-control rounded-0 text-center text-warning">
+
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="vedio-section pt-5 pb-5 mt-4 mb-4 ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-id text-center pt-5 pb-5 m-0" style="background-color: orange;">
+            <h1 class="fw-bold text-white">Some Reels </h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <video src="/vedios/v1.mp4" class="w-100 vedioCreated " controls></video>
+
+        </div>
+        <div class="col-4">
+          <video src="/vedios/v2.mp4" class="w-100 vedioCreated " controls></video>
+        </div>
+        <div class="col-4">
+          <video src="/vedios/v3.mp4" class="w-100 vedioCreated " controls></video>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <video src="/vedios/v5.mp4" class="w-100 vedioCreated " controls></video>
+        </div>
+        <div class="col-4">
+          <video src="/vedios/v6.mp4" class="w-100 vedioCreated " controls></video>
+        </div>
+        <div class="col-4">
+          <video src="/vedios/VID_96431013_110341_893.mp4" class="w-100 vedioCreated " controls></video>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+  <div class="buttons-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <button class="btn p-2 w-100 border mt-3 mb-3 shadow bg-dark text-white fw-bold"
+            onclick="ShowDescription()">Description</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button class="btn p-2 w-100 border mt-3 mb-3 shadow bg-dark text-white fw-bold"
+            onclick="ShhowAdditonal()">Additonal Information</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row  " id="Description" style="display: none;">
+    <div class="col-md-12 p-0">
+      <div class="paraWrape  shadow-lg   border rounded">
+        <div class="et_pb_tab  clearfix et_pb_active_content et-pb-active-slide">
+          <div class="et_pb_tab_content p-3">
+            <h2><strong>Key Features:</strong></h2>
+            <ul>
+              <li><span style="font-weight: 400">100% Hand Drawn Sketch</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Black/Brown Colour Frame</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Delivery Within 7 to 8 days</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">100% satisfaction ensured.</span></li>
+            </ul>
+            <h3><strong>How to order a Handmade Pencil Drawing From a Photo?</strong></h3>
+            <ul>
+              <li style="font-weight: 400"><span style="font-weight: 400">&nbsp;Pick your Art Style among our wide range
+                  of products. Choose the size that you wish (A0, A1, A2, A3) and the number of characters that you want
+                  in the portrait painting.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Once you’re done, upload your desired pictures
+                  and add any special requirements you need in the suggestion box.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Then click the option ‘Add to Cart’, apply the
+                  coupon (if you have any) &amp; Proceed to check out.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Fill in your Address and Contact
+                  details.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Select your payment option and pay the amount
+                  (A minimum of 30% advance will be charged as its a customized work).</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Congratulations, you’re done! Your painting
+                  will reach you soon.</span></li>
+            </ul>
+            <h4><strong>&nbsp;&nbsp; OR</strong></h4>
+            <ul>
+              <li style="font-weight: 400"><span style="font-weight: 400">Click on “WhatsApp Button” and ask our
+                  specialist to order the sketch for you.</span></li>
+            </ul>
+            <h3><strong>Refund Policy:</strong></h3>
+            <ul>
+              <li style="font-weight: 400"><span style="font-weight: 400">Minimum 25% of the total amount will be
+                  deducted after the confirmation of the order.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Order cancellation is allowed until the
+                  artwork preview is sent, If the Artwork is disapproved by the customer even after the revisions. then
+                  refund will be provided by deducting 45% to 75% of the total amount.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Order cancellation won't be allowed after the
+                  Artwork approval.</span></li>
+              <li style="font-weight: 400"><span style="font-weight: 400">Video must be recorded while opening the
+                  product as proof.</span></li>
+            </ul>
+            <p><span style="font-weight: 400">*Damage Claims : Any claims for damage MUST be reported in 48 hours of
+                delivery.</span></p>
+
+          </div><!-- .et_pb_tab_content" -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="additional-info" id="AdditonalInfo" style="display: none;">
+    <div class="row">
+      <div class="col-md-12 p-o">
+        <div class="additional-infoWrap  shadow-lg   border rounded ">
+          <div class="et_pb_tab clearfix et-pb-active-slide" style="z-index: 1; display: block; opacity: 1;">
+            <div class="et_pb_tab_content">
+
+              <h2>Additional information</h2>
+
+              <table class="woocommerce-product-attributes shop_attributes">
+                <tbody>
+                  <tr
+                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_size">
+                    <th class="woocommerce-product-attributes-item__label">Size</th>
+                    <td class="woocommerce-product-attributes-item__value">
+                      <p>A2, A3, A4</p>
+                    </td>
+                  </tr>
+                  <tr
+                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_no-of-faces">
+                    <th class="woocommerce-product-attributes-item__label">No of Faces</th>
+                    <td class="woocommerce-product-attributes-item__value">
+                      <p>1 Face, 2 Face, 3 Faces</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="contact-us">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="text-center">contact us </h5> 
+       <h1 class="fw-bold fs-1 text-center " >  <a href=" https://www.instagram.com/s_a_n_i_k_a_art/" class="text-danger "> <i class=" shadow-lg fa-brands fa-instagram"></i></a></h1>
+      </div>
+      <div class="col-md-4">
+       
+      </div>
+      <div class="col-md-4">
+       
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script>
+    function changeimage() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img2.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage1() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img20.jpg");
+      var img2 = document.getElementById("mainimages");
+      img2.style.transition = "2s";
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage2() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img3.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage3() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img4.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage4() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img7.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage5() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img6.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage6() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img8.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage7() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img9.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage8() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img10.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage9() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img12.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage10() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img20.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage11() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img13.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage12() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img18.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage13() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img1.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage14() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img2.jpg");
+
+      console.log(img1);
+      // img1.src='images/img2.jpg';
+    }
+    function changeimage15() {
+      var img1 = (document.getElementById("mainimages").src =
+        "images/img2.jpg");
+    }
+
+
+
+    // desrciption javascript show button 
+    function ShowDescription() {
+      document.getElementById('Description').style.display = 'block';
+      document.getElementById('AdditonalInfo').style.display = 'none';
+    }
+    function ShhowAdditonal() {
+      document.getElementById('AdditonalInfo').style.display = 'block';
+      document.getElementById('Description').style.display = 'none';
+
+    }
+// form selection option
+                  // function FrameSelectFun(){
+                  //   var frameName = document.getElementById('FrameOPt').value;
+                  //   switch(frameName){
+                  //     case 'WithFrame1':{
+                  //       document.getElementById('WithFrame').style.display='none'
+                  //       document.getElementById('withoutFrame').style.display='block'
+                  //       break;
+                  //     }
+                  //     case'WithoutFrame1':{
+                  //       document.getElementById('WithFrame').style.display='none'
+                  //       document.getElementById('withoutFrame').style.display='block'
+                  //       break;
+
+                  //     }
+                  //   }
+                  // }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+@media (min-width: 100px) and (max-width: 360px){
+
+    .vedioCreated {
+        height: 125px;
+        border: 5px solid #ffeac4;
+        border-radius: 33px 0px 33px 0px;
+        margin: 15px 0px;
+    }
+}
+
